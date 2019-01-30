@@ -35,6 +35,6 @@
       <tr>
             <td colspan="4">No invoices found</td>
           </tr>
-      @endforeach
+      @endforelse
   </table>
 @endsection

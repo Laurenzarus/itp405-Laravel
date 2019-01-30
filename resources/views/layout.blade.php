@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 </head>
 <body>
-    @yield('main'){{--allows access to anything labeled 'main' here--}}
+  <div class='container-fluid'>
+      @yield('main'){{--allows access to anything labeled 'main' here--}}
+  </div>
 </body>
 </html>
