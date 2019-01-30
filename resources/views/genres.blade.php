@@ -3,11 +3,13 @@
 @section('title', 'Genres'){{--Gives the value of 'genres' to the section title--}}
 
 @section('main')
-    <header style="text-align: center">Genres</header>
+    <div class="jumbotron text-center">
+        <h1>Genres</h1>
+    </div>
     <ul class="list-group">
         @forelse ($genres as $genre)
             <li class="list-group-item">
-                <a href='/tracks/genre={{$genre->Name}}'>{{$genre->Name}}</a>
+                <a href='/tracks?genre=<?php echo urlencode($genre->Name); ?>'>{{$genre->Name}}</a>
             </li>
          @empty {{--If there are no results from $genres variable--}}
             <li class="list-group-item">
