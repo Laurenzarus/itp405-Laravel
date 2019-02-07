@@ -1,9 +1,10 @@
-@extends('layout'){{--Gives the file knowledge of the layout.blade.php file. Don't need the extension--}}
+@extends('layouts.layout'){{--Gives the file knowledge of the layout.blade.php file. Don't need the extension--}}
 
 @section('title', 'Tracks'){{--Gives the value of 'genres' to the section title--}}
 
 @section('main')
     <button onclick="location.href = '/genres'" class="btn btn-primary">Return to Genres</button>
+    <button onclick="location.href = '/tracks/new'" class="btn btn-secondary">Add Track</button>
     <div class="jumbotron text-center">
     <h1>Track List ({{$genre}})</h1>
     </div>

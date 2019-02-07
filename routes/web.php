@@ -12,12 +12,19 @@
 dd means dump and die
 */
 
-Route::get('/', 'InvoicesController@index'); //Invokes the method called 'index' in the InvoicesController
+Route::get('/', 'NavigationController@index');//invokes index method for navigation controller
 
-//Assignment 2
+Route::get('/invoices', 'InvoicesController@index'); //Invokes the method called 'index' in the InvoicesController
+
+//Laravel 1
 Route::get('/genres', 'GenresController@index');
 
 Route::get('/tracks', 'TracksController@index');
+
+//Laravel 2
+Route::get('/tracks/new', 'TracksController@create');
+Route::post('/tracks','TracksController@store');
+Route::get('/genres/{id}/edit', 'GenresController@edit');
 
 //Week 4
 Route::get('/playlists', 'PlaylistController@index');//call it index when listing whatever we're dealing with

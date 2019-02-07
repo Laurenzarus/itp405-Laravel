@@ -16,4 +16,8 @@ class GenresController extends Controller
             'genres' => $genres
         ]);
     }
+
+    public function edit() {
+        
+    }
 }

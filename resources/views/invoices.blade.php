@@ -1,4 +1,4 @@
-@extends('layout'){{--Gives the file knowledge of the layout.blade.php file. Don't need the extension--}}
+@extends('layouts.layout'){{--Gives the file knowledge of the layout.blade.php file. Don't need the extension--}}
 
 @section('title', 'Invoices'){{--Gives the value of 'Invoices' to the section title--}}
 

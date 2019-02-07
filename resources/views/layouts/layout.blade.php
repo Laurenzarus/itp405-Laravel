@@ -7,6 +7,7 @@
 </head>
 <body>
   <div class='container-fluid'>
+    @include('layouts.navigation')
       @yield('main'){{--allows access to anything labeled 'main' here--}}
   </div>
 </body>
