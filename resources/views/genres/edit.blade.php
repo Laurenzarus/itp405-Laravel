@@ -10,7 +10,7 @@
         @csrf
         <div class="form-group">
           <label for="genre">Genre</label>
-          <input type="text" name="genre" id="genre" class="form-control" value="{{$genre->Name}}">
+          <input type="text" name="genre" id="genre" class="form-control" value='@if(old('genre')){{old('genre')}}@else{{$genre->Name}}@endif'>
           <small class="text-danger">{{$errors->first('genre')}}</small>
         </div>
         <input type="hidden" name="id" value="{{$id}}">
