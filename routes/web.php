@@ -24,7 +24,8 @@ Route::get('/tracks', 'TracksController@index');
 //Laravel 2
 Route::get('/tracks/new', 'TracksController@create');
 Route::post('/tracks','TracksController@store');
-Route::get('/genres/{id}/edit', 'GenresController@edit');
+Route::get('/genres/{id}/edit', 'GenresController@show');
+Route::post('/genres', 'GenresController@edit');
 
 //Week 4
 Route::get('/playlists', 'PlaylistController@index');//call it index when listing whatever we're dealing with

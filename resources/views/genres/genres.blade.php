@@ -10,7 +10,7 @@
         @forelse ($genres as $genre)
             <li class="list-group-item">
                 <a href='/tracks?genre=<?php echo urlencode($genre->Name); ?>'>{{$genre->Name}}</a>
-                <a class='text-danger' href="/tracks/{{$genre->GenreId}}/edit">Edit</a>
+                <a class='text-danger' href="/genres/{{$genre->GenreId}}/edit">Edit</a>
             </li>
          @empty {{--If there are no results from $genres variable--}}
             <li class="list-group-item">
