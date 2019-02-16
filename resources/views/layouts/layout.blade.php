@@ -6,8 +6,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 </head>
 <body>
+   @include('layouts.navigation')
   <div class='container-fluid'>
-    @include('layouts.navigation')
       @yield('main'){{--allows access to anything labeled 'main' here--}}
   </div>
 </body>

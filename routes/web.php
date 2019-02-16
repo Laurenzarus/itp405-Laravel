@@ -14,8 +14,6 @@ dd means dump and die
 
 Route::get('/', 'NavigationController@index');//invokes index method for navigation controller
 
-Route::get('/invoices', 'InvoicesController@index'); //Invokes the method called 'index' in the InvoicesController
-
 //Laravel 1
 Route::get('/genres', 'GenresController@index');
 
@@ -32,4 +30,16 @@ Route::get('/playlists', 'PlaylistController@index');//call it index when listin
 Route::get('/playlists/new', 'PlaylistController@create');//creating a new playlist
 Route::get('/playlists/{id}', 'PlaylistController@show');//Convention for the function name with general params
 
+//Adding sign up and login functionality
+Route::get('/signup', 'SignUpController@index');
+Route::post('/signup', 'SignUpController@signup');
+Route::get('/login', 'LoginController@index');
+Route::post('/login', 'LoginController@login');
+Route::get('/logout', 'LogiinController@logout');
 
+//middleware here
+Route::middleware(['authenticated'])->group(function() {
+    //put in here any routes that need to check middleware before going through
+    Route::get('/profile', 'AdminController@index');
+    Route::get('/invoices', 'InvoicesController@index'); //Invokes the method called 'index' in the InvoicesController
+});//authenticated key needs configuring
