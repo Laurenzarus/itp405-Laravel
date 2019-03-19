@@ -6,10 +6,8 @@
     <div class="jumbotron text-center text-danger">
         <h1>Welcome to the Connected Document Page! Think of it as budget Google Docs...</h1>
     </div>
-    <form>
-        <div contenteditable="true" id="content"></div>
-        <br>
-        <button type="submit">Send</button>
-    </form>
-    <script src="{{URL::asset('js/main.js')}}"></script>
+    
+    <div contenteditable="true" id="content" class="bg-secondary" style='height: 500; overflow: scroll'></div>
+
+    <script src="{{secure_asset('js/main.js')}}"></script>
 @endsection
