@@ -54,5 +54,7 @@ Route::middleware(['maintenance'])->group(function() {
     Route::get('/playlists/new', 'PlaylistController@create');//creating a new playlist
     Route::get('/playlists/{id}', 'PlaylistController@show');//Convention for the function name with general params
 
-
 });
+
+//Node 3: Websockets
+Route::get('/docs', 'DocsController@index');
