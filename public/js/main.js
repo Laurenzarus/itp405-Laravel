@@ -1,4 +1,4 @@
-let connection = new WebSocket('ws://laurencf-web-socket.herokuapp.com');
+let connection = new WebSocket('wss://laurencf-web-socket.herokuapp.com');
 
 //The parenthetisized code is from https://stackoverflow.com/questions/1125292/how-to-move-cursor-to-end-of-contenteditable-entity/3866442#3866442
 //Namespace management idea from http://enterprisejquery.com/2010/10/how-good-c-habits-can-encourage-bad-javascript-habits-part-1/
