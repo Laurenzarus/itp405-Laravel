@@ -7,7 +7,8 @@
         <h1>Welcome to the Connected Document Page! Think of it as budget Google Docs...</h1>
     </div>
     
-    <div contenteditable="true" id="content" class="bg-secondary" style='height: 500; overflow: scroll'></div>
-
-    <script src="{{secure_asset('js/main.js')}}"></script>
+    <div contenteditable="true" id="content" class="bg-secondary" style='height: 300px; overflow: scroll;'>
+    </div>
+    
+    <script src="{{asset('js/main.js')}}"></script>
 @endsection
